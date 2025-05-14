@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/newProduct.css">
+    <link rel="stylesheet" href="styles/fashion.css">
+    <link rel="stylesheet" href="styles/shopInfo.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@75..100,100..900&display=swap" rel="stylesheet">
+   
+    <title>Shopping UI</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <section>
+        <div class="flex flex-row h-20 justify-between shadow-sm
+        items-center bg-white px-6 fixed z-2 w-full top-0 left-0 right-0" >
+            <div class="left-nav flex flex-row w-xs justify-between" >
+                <img class="h-8 pb-2 cursor-pointer" src="icons/navline.png">
+                <div class="text-sm font-light cursor-pointer" >
+                    Home
+                    <div></div>
+                </div>
+                <div class="text-sm font-light cursor-pointer" >
+                    Products
+                    <span class="cat-text font-thin bg-gray-500 text-white py-0.5 px-2 ml-0.5 rounded cursor-pointer" >
+                        Categories
+                    </span>
+                    <div></div>
+                </div> 
+                <div class="text-sm font-light cursor-pointer " >
+                    Shop
+                    <div></div>
+                </div>
+                <div class="text-sm font-light cursor-pointer" >
+                    Info
+                    <div></div>
+                </div>
+            </div>
+            <div class="flex flex-row w-40 justify-between" >
+                <img class="h-5 cursor-pointer " src="icons/profile.png">
+                <img class="h-5 cursor-pointer" src="icons/search.png">
+                <img class="h-5 cursor-pointer" src="icons/heart.png">
+                <img class="h-5 cursor-pointer" src="icons/bag.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- gallery -->
+    <section>
+        <div class="img-container flex mb-10" >
+            <img src="gallery/preview.png">
+        </div>
+    </section>
+
+    <!-- featured -->
+    <section>
+        <div class="flex flex-row flex-wrap justify-center gap-10 w-fit mb-10" >
+            <div class="h-100 w-80 cursor-pointer img-container">
+                <img class="w-full h-full" src="gallery/feature6.jpg">
+            </div>
+            <div class="h-100 w-80 cursor-pointer img-container">
+                <img class="w-full h-full" src="gallery/feature1.jpg">
+            </div>
+            <div class="h-100 w-80 cursor-pointer img-container">
+                <img class="w-full h-full" src="gallery/feature2.jpeg">
+            </div>
+            <div class="h-100 w-80 cursor-pointer img-container">
+                <img class="w-full h-full" src="gallery/feature3.jpg">
+            </div>
+            <div class="h-100 w-80 cursor-pointer img-container">
+                <img class="w-full h-full" src="gallery/feature4.jpeg">
+            </div>
+            <div class="h-100 w-80 cursor-pointer img-container">
+                <img class="w-full h-full" src="gallery/feature5.jpg">
+            </div>
+          
+        </div>
+    </section>
+
+    <hr class="text-gray-300 mb-10" >
+
+    <!-- new products -->
+    <section>
+        <div class="flex flex-col mb-10 text-center" >
+            <p class="text-2xl mb-5 font-medium" >New Products</p>
+            <p class="text-sm text-gray-500" >Vans's best-selling products can be dressed up or down, making them perfect for any occasion.</p>
+        </div>
+        <div class="flex flex-row flex-wrap justify-center mb-10 gap-x-8" >
+            <div class="h-full w-82 relative img-box" >
+
+                <div class="z-1 px-3 py-2 text-xs rounded-3xl bg-white absolute left-3 top-3" >New</div>
+
+                <div class="z-1 absolute h-8 p-2 rounded-full right-3 top-3 heart cursor-pointer" >
+                    <img class="h-full" src="icons/heart.png">
+                    <div style="left: -83px;" class="absolute px-2 py-1 rounded-xl bg-black text-white tooltip flex justify-items-center" >
+                        <span>Add to wishlist</span>
+                    </div>
+                </div>
+                
+                <div class="z-1 absolute h-8 p-2 rounded-full right-3 top-12  bag cursor-pointer" >
+                    <img class="h-full" src="icons/bag.png">
+                    <div style="left: -81px;" class="absolute px-2 py-1 rounded-xl bg-black text-white tooltip flex justify-items-center" >
+                        <span>Select options</span>
+                    </div>
+                </div>
+                <div class="z-1 absolute h-8 p-2 rounded-full right-3 top-21 view cursor-pointer" >
+                    <img class="h-full" src="icons/view.png">
+                    <div style="left: -66px;" class="absolute px-2 py-1 rounded-xl bg-black text-white tooltip flex justify-items-center" >
+                        <span>Quick view</span>
+                    </div>
+                </div>
+                <img class="w-full h-80 mb-3" src="gallery/new1.jpg" >
+
+                <p class="text-base" >Vans Unisex HYLANE</p>
+                <p class="text-sm text-gray-500" >$135.00</p>
+            </div>
+
+            <div class="h-full w-82 relative img-box" >
+                <div class="z-1 px-3 py-2 text-xs rounded-3xl bg-white absolute left-3 top-3" >New</div>
+
+                <div class="z-1 absolute h-8 p-2 rounded-full right-3 top-3 heart cursor-pointer" >
+                    <img class="h-full" src="icons/heart.png">
+                    <div style="left: -83px;" class="absolute px-2 py-1 rounded-xl bg-black text-white tooltip flex justify-items-center" >
+                        <span>Add to wishlist</span>
+                    </div>
+                </div>
+                
+                <div class="z-1 absolute h-8 p-2 rounded-full right-3 top-12  bag cursor-pointer" >
+                    <img class="h-full" src="icons/bag.png">
+                    <div style="left: -81px;" class="absolute px-2 py-1 rounded-xl bg-black text-white tooltip flex justify-items-center" >
+                        <span>Select options</span>
+                    </div>
+                </div>
+                <div class="z-1 absolute h-8 p-2 rounded-full right-3 top-21 view cursor-pointer" >
+                    <img class="h-full" src="icons/view.png">
+                    <div style="left: -66px;" class="absolute px-2 py-1 rounded-xl bg-black text-white tooltip flex justify-items-center" >
+                        <span>Quick view</span>
+                    </div>
+                </div>
+                <img class="w-full h-80 mb-3" src="gallery/new2.jpg" >
+                <p class="text-base" >Vans Unisex KNU SKOOL</p>
+                <p class="text-sm text-gray-500" >$135.00</p>
+            </div>
+
+            <div class="h-full w-82 relative img-box" >
+                <div class="z-1 px-3 py-2 text-xs rounded-3xl bg-white absolute left-3 top-3" >New</div>
+
+                <div class="z-1 absolute h-8 p-2 rounded-full right-3 top-3 heart cursor-pointer" >
+                    <img class="h-full" src="icons/heart.png">
+                    <div style="left: -83px;" class="absolute px-2 py-1 rounded-xl bg-black text-white tooltip flex justify-items-center" >
+                        <span>Add to wishlist</span>
+                    </div>
+                </div>
+                
+                <div class="z-1 absolute h-8 p-2 rounded-full right-3 top-12  bag cursor-pointer" >
+                    <img class="h-full" src="icons/bag.png">
+                    <div style="left: -81px;" class="absolute px-2 py-1 rounded-xl bg-black text-white tooltip flex justify-items-center" >
+                        <span>Select options</span>
+                    </div>
+                </div>
+                <div class="z-1 absolute h-8 p-2 rounded-full right-3 top-21 view cursor-pointer" >
+                    <img class="h-full" src="icons/view.png">
+                    <div style="left: -66px;" class="absolute px-2 py-1 rounded-xl bg-black text-white tooltip flex justify-items-center" >
+                        <span>Quick view</span>
+                    </div>
+                </div>
+                <img class="w-full h-80 mb-3" src="gallery/new3.jpg" >
+                <p class="text-base" >Vans Unisex OLD SKOOL</p>
+                <p class="text-sm text-gray-500" >$129.00</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <hr class="text-gray-300 mb-10" >
+
+    <!-- fashion -->
+    <section>
+        <div class="flex flex-col mb-10 text-center " >
+            <p class="text-2xl mb-5 font-medium" >Sustainable Fashion</p>
+            <p class="text-sm text-gray-500" >
+                Experience sustainable fashion that’s both stylish and socially responsible with our latest eco-friendly collection
+            </p>
+        </div>
+        <div class="flex flex-row flex-wrap gap-x-8 justify-center mb-10 card-container" >
+            <div class="w-60 h-80 relative card img-container" >
+                <img class="h-60 w-full mb-3" src="gallery/product1.jpg">
+                <div class="flex flex-row absolute left-13 top-40 bg-white navigate-box" >
+                    <div  style="border-right-width: 0.5px;" class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/heart.png">
+                    </div>
+                    <div class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/bag.png">
+                    </div>
+                    <div style="border-left-width: 0.5px;" class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/view.png">
+                    </div>
+                </div>
+                <p class="text-base" >Old Skool</p>
+                <p class="text-sm text-gray-500" >$99.00</p>
+            </div>
+            <div class="w-60 h-80 relative card img-container" >
+                <img class="h-60 w-full mb-3" src="gallery/product2.jpg">
+                <div class="flex flex-row absolute left-13 top-40 bg-white navigate-box" >
+                    <div  style="border-right-width: 0.5px;" class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/heart.png">
+                    </div>
+                    <div class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/bag.png">
+                    </div>
+                    <div style="border-left-width: 0.5px;" class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/view.png">
+                    </div>
+                </div>
+                <p class="text-base" >UltraRange EXO Shoe</p>
+                <p class="text-sm text-gray-500" >$139.00</p>
+            </div>
+            <div class="w-60 h-80 relative card img-container" >
+                <img class="h-60 w-full mb-3" src="gallery/product3.jpg">
+                <div class="flex flex-row absolute left-13 top-40 bg-white navigate-box" >
+                    <div  style="border-right-width: 0.5px;" class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/heart.png">
+                    </div>
+                    <div class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/bag.png">
+                    </div>
+                    <div style="border-left-width: 0.5px;" class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/view.png">
+                    </div>
+                </div>
+                <p class="text-base" >Pig Suede Old Skool</p>
+                <p class="text-sm text-gray-500" >$109.00</p>
+            </div>
+            <div class="w-60 h-80 relative card img-container" >
+                <img class="h-60 w-full mb-3" src="gallery/product4.jpg">
+                <div class="flex flex-row absolute left-13 top-40 bg-white navigate-box" >
+                    <div  style="border-right-width: 0.5px;" class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/heart.png">
+                    </div>
+                    <div class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/bag.png">
+                    </div>
+                    <div style="border-left-width: 0.5px;" class="w-10 h-10 p-3 cursor-pointer" >
+                        <img class="w-full h-full" src="icons/view.png">
+                    </div>
+                </div>
+                <p class="text-base" >Style 36 2-Tone Shoe</p>
+                <p class="text-sm text-gray-500" >$105.00</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="text-gray-300 mb-10" >
+
+    <!-- visit us -->
+    <section>
+        <div class="flex flex-col mb-10 text-center " >
+            <p class="text-2xl mb-5 font-medium" >Visit Us</p>
+            <p class="text-sm text-gray-500" >
+                Get ready to meet the new you by visiting our experience stores!
+                See our store locations.
+            </p>
+        </div>
+        <div class="h-150 mx-10 flex flex-row justify-center mb-10" >
+            <img class="w-265 h-full store" src="gallery/store.jpg">
+        </div>
+    </section>
+
+    <hr class="text-gray-300 mb-10" >
+
+    <!-- About Us -->
+    <section>   
+        <div class="flex flex-row flex-wrap  mx-30 mb-10  justify-between" >
+            <div class="flex flex-col h-40 justify-between info-box" >
+                <p class="text-gray-500 mb-1" >COMPANY</p>
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    About Us
+                    <div></div>
+                </div> 
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Contact
+                    <div></div>
+                </div>
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Store Locations
+                    <div></div>
+                </div> 
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Careers
+                    <div></div>
+                </div>
+            </div>
+            <div class="flex flex-col h-50 justify-between info-box" >
+                <p class="text-gray-500 mb-1" >
+                    HELP
+                </p>
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Order Tracking
+                    <div></div>
+                </div> 
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    FAQ's
+                    <div></div>
+                </div> 
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Delivery Policy
+                    <div></div>
+                </div> 
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Privacy Policy
+                    <div></div>
+                </div> 
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Return & Exchange Policy
+                    <div></div>
+                </div> 
+            </div>
+            <div class="flex flex-col h-50 justify-between info-box" >
+                <p class="text-gray-500 mb-1" >
+                    Store
+                </p>
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Topwear
+                    <div></div>
+                </div> 
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Outerwear
+                    <div></div>
+                </div> 
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Pants
+                    <div></div>
+                </div> 
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Shoes
+                    <div></div>
+                </div> 
+                <div class="text-sm font-light w-max cursor-pointer" >
+                    Accessories
+                    <div></div>
+                </div> 
+            </div>
+            <div class="flex flex-col h-30 justify-between w-58 follow-box" >
+                <p class="text-gray-500 mb-1" >Follow Us</p>
+                <p class="text-sm font-light text-gray-500" >Keep up-to-date with our latest things by following us on our social media channels</p>
+                <div class="flex flex-row w-25 justify-between" >
+                    <div class="w-5 h-5" >
+                        <img src="icons/facebook.png">
+                    </div>
+                    <div class="w-5 h-5" >
+                        <img src="icons/instagram.png">
+                    </div>
+                    <div class="w-5 h-5" >
+                        <img src="icons/linkedin.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="text-gray-300 mb-10" >
+
+    <p class="text-sm text-gray-500 mb-10 text-center" >&copy; ZayMoeYan</p>
+
+</body>
+</html>

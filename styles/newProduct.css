@@ -1,0 +1,44 @@
+.img-box > img {
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.img-box:hover img {
+    transform: scale(1.02);
+}
+
+.img-box:hover .heart{
+    background-color: white;
+}
+
+.heart {
+    transition: background-color 0.2s ease;
+}
+
+.bag, .view {
+    opacity: 0;
+    transition: background-color 0.2s ease;
+}
+
+.img-box:hover .bag,
+.img-box:hover .view {
+    background-color: white;
+    opacity: 1;
+}
+
+.img-box > .heart:hover .tooltip,
+.img-box > .bag:hover .tooltip,
+.img-box > .view:hover .tooltip {
+    opacity: 1;
+}
+
+.tooltip {
+    top: 3px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.tooltip > span {
+    font-size: 10px;
+}

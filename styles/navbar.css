@@ -1,0 +1,15 @@
+.left-nav > div > div {
+    background-color: black;
+    height: 2px;
+    margin-top: 5px;
+    width: 0%;
+    transition: width 0.2s ease-out;
+}
+
+.left-nav > div:hover div {
+    width: 100%;
+}
+
+.cat-text {
+    font-size: 10px;
+}
