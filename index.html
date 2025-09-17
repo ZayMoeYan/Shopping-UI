@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<script
+  src="https://cdn.jsdelivr.net/gh/logspace-ai/langflow-embedded-chat@v1.0.7/dist/build/static/js/bundle.min.js">
+</script>
+
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/newProduct.css">
@@ -17,6 +21,7 @@
     <title>Shopping UI</title>
 </head>
 <body>
+  
     <!-- Navbar -->
     <section>
         <div class="flex flex-row h-20 justify-between shadow-sm
@@ -51,6 +56,27 @@
             </div>
         </div>
     </section>
+
+    <langflow-chat
+        class="fixed right-2 top-190 z-100"
+        window_title="MOT Assistant Bot"
+        flow_id="55575de0-10bb-408e-8988-0c5a8849f57a"
+        host_url="https://zaymoeyan-testing.hf.space"
+        api_key="sk-NrdlTUdsr8wdqDuHWOnoPhxzSU2mBDBLAlPTV9WKY2Y"
+        chat_position="top-left"
+        height="500"
+        width="400"
+        online=true
+        session_id="custom_session"
+        placeholder_sending="..."
+
+        chat_window_style='{"backgroundColor": "#000000"}'
+        bot_message_style='{ "color": "#ffffff", "backgroundColor": "#1a1a1a" }'
+        user_message_style='{ "color": "#ffffff", "backgroundColor": "#db0000" }'
+        chat_trigger_style='{ "backgroundColor": "#db0000", "color": "#ffffff" }'    
+        >
+    </langflow-chat>
+
 
     <!-- gallery -->
     <section>
@@ -365,33 +391,16 @@
         </div>
     </section>
 
+    
+
+    </section>
+    
     <hr class="text-gray-300 mb-10" >
 
     <p class="text-sm text-gray-500 mb-10 text-center" >&copy; ZayMoeYan</p>
-
+    
+    
 </body>
-<script>
-    (
-        function() {
-            if(!window.chatbase||window.chatbase("getState")!=="initialized") {
-                window.chatbase=(...arguments) => {
-                    if(!window.chatbase.q) {
-                        window.chatbase.q=[]
-                    }
-                    window.chatbase.q.push(arguments)};
-        window.chatbase = new Proxy(window.chatbase,{get(target,prop){
-            if(prop==="q"){
-                return target.q
-            }
-            return(...args)=>target(prop,...args)}} )}
-        const onLoad = function(){const script=document.createElement("script");
-        script.src = "https://www.chatbase.co/embed.min.js";script.id="b3wMRtIyHMk7otVcMetn8";
-        script.domain = "www.chatbase.co";document.body.appendChild(script)};
-        if(document.readyState==="complete") {
-            onLoad()
-        }else{
-            window.addEventListener("load",onLoad)}
-        }
-    ) ();
-</script>
+
+
 </html>
